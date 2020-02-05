@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--<meta charset="UTF-8">-->
+    <meta charset="UTF-8" content="width=device-width, minimum-scale=1.0,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" id="viewport" name="viewport">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0, user-scalable=no"/>-->
+    <title>Title</title>
+    <link href="reset.css" rel="stylesheet">
+    <style>
+        /*html,body{*/
+            /*max-width: 768px;*/
+            /*min-width: 320px;*/
+        /*}*/
+        .search{
+            background-color: #F0F0F0;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .search input{
+            border-width: 0px;
+            height: 32px;
+            flex: 0.96;
+        }
+        .hot-search ul{
+            display: flex;
+            align-items: center;
+            padding: 2px 2px;
+        }
+        .hot-search li{
+            margin: 0 6px;
+        }
+        .slide{
+            display: flex;
+        }
+        .slide img{
+            width: 100%;
+            flex: 1;
+        }
+        .pxui-xcx-g{
+            display: flex;
+            justify-content: center;
+        }
+        .pxui-xcx-g .pxui-xcx-span
+        {
+            margin: 6px;
+        }
+        .tab
+        {
+            display: flex;
+            justify-content:space-around;
+        }
+        .tab a
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+        }
+        .tab img{
+            width: 26px;
+            height: 26px;
+        }
+        .list-recommend ul{
+            display: flex;
+        }
+        .list-recommend li{
+            display: flex;
+            justify-content: center;
+            flex: 1;
+        }
+        .list-recommend img{
+            max-width: 80px;
+        }
+        .list-literature ul{
+            display: flex;
+        }
+        .list-literature li{
+            display: flex;
+            justify-content: center;
+            flex: 1;
+        }
+        .list-literature img{
+            max-width: 80px;
+        }
+
+        .bi_li{
+            border: 1px solid red;
+            display: flex;
+        }
+        .bi_li .bi-l img{
+            width: 80px;
+        }
+        .bi_li .bi-r
+        {
+            flex: 1 1 auto;
+        }
+        .footer_nav{
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+        .footer_nav .footer-tab
+        {
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer-tab a{
+            height: 60px;
+            border: 1px solid red;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+<div class="search">
+    <input type="text" placeholder="书名、作者">
+</div>
+<div class="hot-search">
+    <ul>
+        <li>热门搜索：</li>
+        <li>高等数学</li>
+        <li>高等数学</li>
+        <li>高等数学</li>
+        <li>高等数学</li>
+    </ul>
+</div>
+<div class="slide">
+    <img src="img/slide.jpg" width="540" height="220">
+</div>
+<div class="pxui-xcx-g">
+    <span class="pxui-xcx-span"><span>√</span>保证正品</span>
+    <span class="pxui-xcx-span"><span>√</span>保证低价</span>
+    <span class="pxui-xcx-span"><span>√</span>24小时发货</span>
+    <span class="pxui-xcx-span"><span>√</span>无理由退货</span>
+</div>
+<div class="tab">
+    <a href="#"><img src="img/classify.jpg">分类搜索</a>
+    <a href="#"><img src="img/classify.jpg">分类搜索</a>
+    <a href="#"><img src="img/classify.jpg">分类搜索</a>
+    <a href="#"><img src="img/classify.jpg">分类搜索</a>
+    <a href="#"><img src="img/classify.jpg">分类搜索</a>
+</div>
+<div class="bookList">
+    <div class="book-items">
+        <div class="item">
+            <span>推荐图书</span>
+            <i class="left-arrow"></i><span>您喜欢的都在这里</span>
+            <a id="a_recommend_more" class="span-more">更多</span><i class="right-arrow"></i></a>
+        </div>
+        <div class="list-recommend">
+            <ul>
+                <li>
+                    <a href="/3614284">
+                        <div class="book-img">
+                            <img alt="阿弥陀佛么么哒"
+                                 src="img/book.jpg">
+                        </div>
+                        <div class="bookName nape">阿弥陀佛么么哒</div>
+                        <div class="price nape cost">
+                            <div>有路价</div>
+                            ￥15.00
+                        </div>
+                        <div class="priceVip nape cost">
+                            <div>VIP价</div>
+                            ￥14.30
+                        </div>
+                    </a>
+                </li>
+                <li><a href="/3425751">
+                    <div class="book-img"><img alt="乖.摸摸头"
+                                               src="img/book.jpg"></div>
+                    <div class="bookName nape">乖.摸摸头</div>
+                    <div class="price nape cost">
+                        <div>有路价</div>
+                        ￥14.00
+                    </div>
+                    <div class="priceVip nape cost">
+                        <div>VIP价</div>
+                        ￥13.30
+                    </div>
+                </a></li>
+                <li><a href="/3817287">
+                    <div class="book-img"><img alt="好吗好的"
+                                               src="img/book.jpg"></div>
+                    <div class="bookName nape">好吗好的</div>
+                    <div class="price nape cost">
+                        <div>有路价</div>
+                        ￥15.00
+                    </div>
+                    <div class="priceVip nape cost">
+                        <div>VIP价</div>
+                        ￥14.30
+                    </div>
+                </a></li>
+            </ul>
+        </div>
+        <div class="pxui-batch-refresh" id="recommend_change"><a class="a_recommend_change" pageindex="2"><span>换一换</span></a></div>
+    </div>
+    <div class="book-items">
+        <div class="item"><span>精品文学</span><i class="left-arrow"></i><span>大家都喜欢看</span><a id="a_literature_more"
+                                                                                           class="a-more"><span
+                class="span-more">更多</span><i class="right-arrow"></i></a></div>
+        <div class="list-literature">
+            <ul>
+                <li><a href="#">
+                    <div class="book-img">
+                        <img alt="将来的你,一定会感谢现在拼命的自己"
+                             src="img/book.jpg">
+                    </div>
+                    <div class="bookName nape">将来的你,一定会感谢现在拼命的自己</div>
+                    <div class="price nape cost">
+                        <div>有路价</div>
+                        ￥12.00
+                    </div>
+                    <div class="priceVip nape cost">
+                        <div>VIP价</div>
+                        ￥11.40
+                    </div>
+                </a></li>
+                <li><a href="/3240320">
+                    <div class="book-img"><img alt="从你的全世界路过(让所有人心动的故事)（内容一致，印次、封面或原价不同，统一售价，随机发货）"
+                                               src="img/book.jpg"></div>
+                    <div class="bookName nape">从你的全世界路过</div>
+                    <div class="price nape cost">
+                        <div>有路价</div>
+                        ￥10.00
+                    </div>
+                    <div class="priceVip nape cost">
+                        <div>VIP价</div>
+                        ￥9.50
+                    </div>
+                </a></li>
+                <li><a href="/3382272">
+                    <div class="book-img"><img alt="不要让未来的你,讨厌现在的自己"
+                                               src="img/book.jpg"></div>
+                    <div class="bookName nape">不要让未来的你,讨厌现在的自己</div>
+                    <div class="price nape cost">
+                        <div>有路价</div>
+                        ￥13.10
+                    </div>
+                    <div class="priceVip nape cost">
+                        <div>VIP价</div>
+                        ￥12.40
+                    </div>
+                </a></li>
+            </ul>
+        </div>
+        <div class="pxui-batch-refresh" id="literature_change"><a class="a_literature_change"
+                                                                  pageindex="2"><span>换一换</span></a></div>
+    </div>
+    <div class="book-items">
+        <div class="item"><span>特色教材</span><i class="left-arrow"></i><span>大学里受欢迎的书</span></div>
+        <div class="bookInfo">
+            <ul>
+                <li class="bi_li" bookid="#">
+                    <div class="bi-l">
+                        <img src="img/car.jpg" alt="汽车理论(第5版)">
+                    </div>
+                    <div class="bi-r flex">
+                        <a href="/#">
+                            <div class="name">汽车理论(第5版)</div>
+                        </a>
+                        <div class="author">余志生</div>
+                        <div class="price">
+                            <span>有路价：</span>
+                            <span>￥14.00</span>
+                            <span class="discount"><span>39</span>折</span>
+                        </div>
+                        <div class="price">
+                            <span>VIP价：</span>
+                            <span class="Vip">
+                                    ￥13.30
+                                </span>
+                            <span class="discount"><span>37</span>折</span></div>
+                        <div class="price">
+                            <span>团购价：</span>
+                            <span>
+                                    ￥11.20
+                                </span>
+                            <span class="discount"><span>31</span>折</span></div>
+                    </div>
+                </li>
+                <li class="bi_li" bookid="#">
+                    <div class="bi-l">
+                        <img src="img/car.jpg" alt="汽车理论(第5版)">
+                    </div>
+                    <div class="bi-r flex">
+                        <a href="/1868617">
+                            <div class="name">汽车理论(第5版)</div>
+                        </a>
+                        <div class="author">余志生</div>
+                        <div class="price">
+                            <span>有路价：</span>
+                            <span>￥14.00</span>
+                            <span class="discount"><span>39</span>折</span>
+                        </div>
+                        <div class="price">
+                            <span>VIP价：</span>
+                            <span class="Vip">
+                                    ￥13.30
+                                </span>
+                            <span class="discount"><span>37</span>折</span></div>
+                        <div class="price">
+                            <span>团购价：</span>
+                            <span>
+                                    ￥11.20
+                                </span>
+                            <span class="discount"><span>31</span>折</span></div>
+                    </div>
+                </li>
+                <li class="bi_li" bookid="#">
+                    <div class="bi-l">
+                        <img src="img/car.jpg" alt="汽车理论(第5版)">
+                    </div>
+                    <div class="bi-r flex">
+                        <a href="/1868617">
+                            <div class="name">汽车理论(第5版)</div>
+                        </a>
+                        <div class="author">余志生</div>
+                        <div class="price">
+                            <span>有路价：</span>
+                            <span>￥14.00</span>
+                            <span class="discount"><span>39</span>折</span>
+                        </div>
+                        <div class="price">
+                            <span>VIP价：</span>
+                            <span class="Vip">
+                                    ￥13.30
+                                </span>
+                            <span class="discount"><span>37</span>折</span></div>
+                        <div class="price">
+                            <span>团购价：</span>
+                            <span>
+                                    ￥11.20
+                                </span>
+                            <span class="discount"><span>31</span>折</span></div>
+                    </div>
+                </li>
+                <li class="bi_li" bookid="#">
+                    <div class="bi-l">
+                        <img src="img/car.jpg" alt="汽车理论(第5版)">
+                    </div>
+                    <div class="bi-r flex">
+                        <a href="/1868617">
+                            <div class="name">汽车理论(第5版)</div>
+                        </a>
+                        <div class="author">余志生</div>
+                        <div class="price">
+                            <span>有路价：</span>
+                            <span>￥14.00</span>
+                            <span class="discount"><span>39</span>折</span>
+                        </div>
+                        <div class="price">
+                            <span>VIP价：</span>
+                            <span class="Vip">
+                                    ￥13.30
+                                </span>
+                            <span class="discount"><span>37</span>折</span></div>
+                        <div class="price">
+                            <span>团购价：</span>
+                            <span>
+                                    ￥11.20
+                                </span>
+                            <span class="discount"><span>31</span>折</span></div>
+                    </div>
+                </li>
+                <li class="bi_li" bookid="#">
+                    <div class="bi-l">
+                        <img src="img/car.jpg" alt="汽车理论(第5版)">
+                    </div>
+                    <div class="bi-r flex">
+                        <a href="/1868617">
+                            <div class="name">汽车理论(第5版)</div>
+                        </a>
+                        <div class="author">余志生</div>
+                        <div class="price">
+                            <span>有路价：</span>
+                            <span>￥14.00</span>
+                            <span class="discount"><span>39</span>折</span>
+                        </div>
+                        <div class="price">
+                            <span>VIP价：</span>
+                            <span class="Vip">
+                                    ￥13.30
+                                </span>
+                            <span class="discount"><span>37</span>折</span></div>
+                        <div class="price">
+                            <span>团购价：</span>
+                            <span>
+                                    ￥11.20
+                                </span>
+                            <span class="discount"><span>31</span>折</span></div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+        <div class="pxui-load-more" id="pxui_load_more"></div>
+    </div>
+
+
+</div>
+<div class="footer_nav">
+    <div class="footer-tab">
+        <a class="footer_nav_a" href="/"><i class="footer_nav_i"></i>首页</a>
+        <a class="footer_nav_a" href="/sellbook/Default.aspx"><i></i>我要卖书</a>
+        <a class="footer_nav_a" href="/mshoppingCart/"><i class="footer_nav_i"></i>购物车</a>
+        <a class="footer_nav_a" href="/muserCenter/myYoulu/"><i class="footer_nav_i"></i>我的有路</a>
+    </div>
+</div>
+</body>
+</html>
